@@ -80,7 +80,7 @@
             return false;
     }
 
-    d3.csv("power_plants.csv").then(data => {
+    d3.csv("/Users/oliviaminier/Documents/GitHub/CGT-370-Lab13-MinierOlivia/power_plants.csv").then(data => {
 
       data.forEach(d => {
         d.capacity_mw = +d.capacity_mw;
@@ -317,6 +317,7 @@
           .attr("transform", "rotate(-90)")
           .attr("text-anchor", "middle")
           .text("Total Capacity (MW)");
+
 
         g.selectAll("g.decade-group")
           .data(barData)
