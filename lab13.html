@@ -122,6 +122,12 @@
         g.append("g")
           .call(d3.axisLeft(yScale));
 
+        g.append("circle")
+ .attr("cx", 50)
+ .attr("cy", 50)
+ .attr("r", 10)
+ .attr("fill", "black");
+
         g.append("text")
           .attr("x", width / 2)
           .attr("y", height + 45)
