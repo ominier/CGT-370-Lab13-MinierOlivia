@@ -81,7 +81,6 @@
     }
 
     d3.csv("power_plants.csv").then(data => {
-
       data.forEach(d => {
         d.capacity_mw = +d.capacity_mw;
         d.year_built = +d.year_built;
@@ -228,9 +227,10 @@
           .domain(["Renewable", "Non-Renewable"])
           .range(d3.schemeAccent);
 
-        g.selectAll("path")
+        g.selectAll(".line")
           .data(lineData)
           .join("path")
+          .attr("class", "line")
           .attr("fill", "none")
           .attr("stroke", d => groupColor(d.group))
           .attr("stroke-width", 2)
